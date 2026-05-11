@@ -10,13 +10,14 @@
 </head>
 <h1>UserDetails</h1>
 <body>
-	<c:if test="${not empty userDetails}">
-	${userDetails}
-		<c:forEach var="ud" items="userDetails">
+	
+	<c:forEach items="userDetails" var="ud">
 
-		</c:forEach>
+		<tr>
+			<td>${ud.age}</td>
+		</tr>
+	</c:forEach>
 
-	</c:if>
 
 </body>
 </html>

@@ -11,6 +11,7 @@
 <form action="./userregister" method = "post">
 	UserName: <input type = "text" name="userName"></input>
 	Age: <input type = "text" name="age"></input>
+	Salary: <input type = "text" name="salary"></input>
 	Password:	<input type = "password" name="password"></input>
 	<button type = "submit" value="Submit"> Submit
 	</button>

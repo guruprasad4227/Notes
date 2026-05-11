@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.cttc.FirstSpringBoot.model.UserDetailsDTO;
+import com.cttc.FirstSpringBoot.entity.UserEntity;
 import com.cttc.FirstSpringBoot.service.RegisterService;
 
 @RequestMapping("/register")
@@ -25,13 +25,10 @@ public class RegisterController {
 	}
 
 	@PostMapping("/userregister")
-	String userRegister(UserDetailsDTO userDetails, Model model) {
+	String userRegister(UserEntity userDetails, Model model) {
 		System.out.println(userDetails);
-		Integer userSave = registerService.userSave(userDetails.getUserName(), userDetails.getPassword(),
-				userDetails.getAge());
-		if (userSave > 0) {
-			model.addAttribute("name", userDetails.getUserName());
-		}
+		UserEntity userSave = registerService.userSave(userDetails);
+
 		return "redirect:test";
 	}
 
