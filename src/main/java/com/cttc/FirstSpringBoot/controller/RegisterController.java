@@ -19,7 +19,7 @@ public class RegisterController {
 		this.registerService = registerService;
 	}
 
-	@GetMapping("/")
+	@GetMapping("/register")
 	String home() {
 		return "register";
 	}
@@ -28,7 +28,11 @@ public class RegisterController {
 	String userRegister(UserEntity userDetails, Model model) {
 		System.out.println(userDetails);
 		UserEntity userSave = registerService.userSave(userDetails);
-
+		if (userSave != null) {
+			model.addAttribute("success", "Registration success");
+		} else {
+			model.addAttribute("error", "Registration failed");
+		}
 		return "redirect:test";
 	}
 

@@ -17,6 +17,6 @@
 	</button>
 	</form>
 	
-	<a href='login.jsp'>Login</a>
+	<a href='../login/login'>Login</a>
 </body>
 </html>

@@ -22,7 +22,7 @@ public class LoginController {
 		this.loginService = loginService;
 	}
 
-	@GetMapping("/")
+	@GetMapping("/login")
 	String goToLogin() {
 		return "login";
 	}

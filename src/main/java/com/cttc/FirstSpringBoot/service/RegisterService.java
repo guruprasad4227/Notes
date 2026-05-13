@@ -2,11 +2,9 @@ package com.cttc.FirstSpringBoot.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.cttc.FirstSpringBoot.entity.UserEntity;
 import com.cttc.FirstSpringBoot.repository.RegisterRepository;
 import com.cttc.FirstSpringBoot.repository.UserJPARepository;
-
 @Service
 public class RegisterService {
 
@@ -26,7 +24,7 @@ public class RegisterService {
 //
 //	}
 
-	// through spring JPAuserjpaRepository
+	// through spring JPA
 	public UserEntity userSave(UserEntity userDetails) {
 		return userjpaRepository.save(userDetails);
 	}

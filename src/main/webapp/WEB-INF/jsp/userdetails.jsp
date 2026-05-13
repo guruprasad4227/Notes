@@ -1,22 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>View Student Details</title>
 </head>
 <h1>UserDetails</h1>
 <body>
-	
-	<c:forEach items="userDetails" var="ud">
-
+	<table border="1">
 		<tr>
-			<td>${ud.age}</td>
+			<th>SI No.</th>
+			<th>User Name</th>
+			<th>Age</th>
+			<th>Salary</th>
 		</tr>
-	</c:forEach>
+
+		<c:forEach items="${userDetails}" var="ud" varStatus="i">
+
+			<tr>
+				<td>${i.index+1}</td>
+				<td>${ud.userName}</td>
+				<td>${ud.age}</td>
+				<td>${ud.salary}</td>
+			</tr>
+		</c:forEach>
+
+	</table>
+
+
 
 
 </body>

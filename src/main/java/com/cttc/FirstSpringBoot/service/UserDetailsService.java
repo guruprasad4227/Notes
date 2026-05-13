@@ -5,17 +5,17 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cttc.FirstSpringBoot.model.UserDetailsDTO;
-import com.cttc.FirstSpringBoot.repository.UserDetailsRepository;
+import com.cttc.FirstSpringBoot.entity.UserEntity;
+import com.cttc.FirstSpringBoot.repository.UserJPARepository;
 
 @Service
 public class UserDetailsService {
 
 	@Autowired
-	private UserDetailsRepository detailsRepository;
+	private UserJPARepository detailsRepository;
 
-	public List<UserDetailsDTO> userView() {
+	public List<UserEntity> userView() {
 
-		return detailsRepository.userView();
+		return detailsRepository.findAll();
 	}
 }

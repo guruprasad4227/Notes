@@ -17,6 +17,6 @@
 	</button>
 	</form>
 	
-	<a href='register.jsp'>Register</a>
+	<a href='../register/register'>Register</a>
 </body>
 </html>
