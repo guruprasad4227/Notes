@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,9 +16,7 @@
 			<th>Age</th>
 			<th>Salary</th>
 		</tr>
-
 		<c:forEach items="${userDetails}" var="ud" varStatus="i">
-
 			<tr>
 				<td>${i.index+1}</td>
 				<td>${ud.userName}</td>
@@ -27,11 +24,6 @@
 				<td>${ud.salary}</td>
 			</tr>
 		</c:forEach>
-
 	</table>
-
-
-
-
 </body>
 </html>
