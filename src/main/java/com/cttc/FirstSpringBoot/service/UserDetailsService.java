@@ -18,4 +18,14 @@ public class UserDetailsService {
 
 		return detailsRepository.findAll();
 	}
+
+	public void delete(Integer userId) {
+		detailsRepository.deleteById(userId);
+	}
+
+	public UserEntity edit(Integer userId) {
+		UserEntity singleUser = detailsRepository.findById(userId).orElse(null);
+		return singleUser;
+
+	}
 }

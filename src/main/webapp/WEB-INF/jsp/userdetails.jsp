@@ -15,6 +15,7 @@
 			<th>User Name</th>
 			<th>Age</th>
 			<th>Salary</th>
+			<th>Action</th>
 		</tr>
 		<c:forEach items="${userDetails}" var="ud" varStatus="i">
 			<tr>
@@ -22,6 +23,11 @@
 				<td>${ud.userName}</td>
 				<td>${ud.age}</td>
 				<td>${ud.salary}</td>
+				<td><a href="${pageContext.request.contextPath}/userview/delete/${ud.userId}">Delete</a>
+				
+				&nbsp;
+				
+				<a href="${pageContext.request.contextPath}/userview/edit/${ud.userId}">Edit</a></td>
 			</tr>
 		</c:forEach>
 	</table>
