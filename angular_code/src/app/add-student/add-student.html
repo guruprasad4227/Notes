@@ -1,0 +1,13 @@
+<form (ngSubmit)="saveStudent()">
+  <label for="">UserName</label>
+  <input type="text" name="userName" [(ngModel)]="userName" />
+
+  <label for="">Age</label>
+  <input type="text" name="age" [(ngModel)]="age" />
+  <label for="">Password</label>
+  <input type="text" name="password" [(ngModel)]="password" />
+  <label for="">Salary</label>
+  <input type="text" name="salary" [(ngModel)]="salary" />
+
+  <button type="submit">Submit</button>
+</form>

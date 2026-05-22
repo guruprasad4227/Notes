@@ -1,11 +1,10 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { RouterOutlet, RouterLinkWithHref, RouterLink } from '@angular/router';
-import { Test } from './test';
+import { RouterOutlet, RouterLinkWithHref } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, CommonModule],
+  imports: [RouterOutlet, RouterLinkWithHref, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

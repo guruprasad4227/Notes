@@ -1,28 +1,18 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <table border="1" [cellPadding]="2">
-      <thead>
-        <tr>
-          <td>UserName</td>
-          <td>Age</td>
-          <td>Salary</td>
-        </tr>
-      </thead>
-      <tbody>
-        @for (user of users; track user.id) {
-          <tr>
-            <td>{{user.userName}}</td>
-            <td>{{user.age}}</td>
-            <td>{{user.salary}}</td>
-          </tr>
-        }
-      </tbody>
-    </table>
-  </body>
-</html>
+<table border="1" [cellPadding]="8" [cellSpacing]="2">
+  <thead>
+    <tr>
+      <td>UserName</td>
+      <td>Age</td>
+      <td>Salary</td>
+    </tr>
+  </thead>
+  <tbody>
+    @for (user of users; track user.userId) {
+      <tr>
+        <td>{{ user.userName }}</td>
+        <td>{{ user.age }}</td>
+        <td>{{ user.salary }}</td>
+      </tr>
+    }
+  </tbody>
+</table>

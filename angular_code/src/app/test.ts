@@ -12,4 +12,11 @@ export class Test {
     return this.httpclient.get<any>('http://localhost:8098/firstspringboot/userview/viewdetails');
     //to get data from backend api by using httpClient
   }
+  addServiceStudent(student: any): Observable<any> {
+    return this.httpclient.post<any>(
+      'http://localhost:8098/firstspringboot/register/userregister',
+      student,
+    );
+    //to get data from backend api by using httpClient
+  }
 }
