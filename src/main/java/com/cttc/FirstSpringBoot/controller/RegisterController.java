@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.cttc.FirstSpringBoot.entity.UserEntity;
 import com.cttc.FirstSpringBoot.service.RegisterService;
@@ -39,9 +41,23 @@ public class RegisterController {
 //		return "redirect:test";
 //	}
 
+//	@PostMapping("/userregister")
+//	UserEntity userRegister(@RequestBody UserEntity user) {
+//		UserEntity userSave = registerService.userSave(user);
+//		return userSave;
+//	}
+//	
+
 	@PostMapping("/userregister")
-	UserEntity userRegister(@RequestBody UserEntity user) {
-		UserEntity userSave = registerService.userSave(user);
+	UserEntity userRegister(@RequestParam String userName, @RequestParam String password, @RequestParam String age,
+			@RequestParam String salary, @RequestParam String email, @RequestParam MultipartFile image) {
+		UserEntity user = new UserEntity();
+		user.setUserName(userName);
+		user.setPassword(password);
+		user.setSalary(Double.parseDouble(salary));
+		user.setAge(Integer.parseInt(age));
+		user.setUserMail(email);
+		UserEntity userSave = registerService.userSave(user, image);
 		return userSave;
 	}
 

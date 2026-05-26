@@ -28,5 +28,8 @@ public class UserEntity {
 
 	@Column(name = "user_mail")
 	private String userMail;
+	
+	@Column(name = "image_name")
+	private String imageName;
 
 }
