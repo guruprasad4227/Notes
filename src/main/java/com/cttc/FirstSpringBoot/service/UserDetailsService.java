@@ -28,4 +28,8 @@ public class UserDetailsService {
 		return singleUser;
 
 	}
+
+	public UserEntity userUpdate(UserEntity userDetails) {
+		return detailsRepository.save(userDetails);
+	}
 }
