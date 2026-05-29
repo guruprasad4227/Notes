@@ -1,0 +1,13 @@
+import { Component, OnInit, signal } from '@angular/core';
+import { RouterOutlet, RouterLink, RouterLinkWithHref } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet, RouterLink],
+  templateUrl: './app.html',
+  styleUrl: './app.css',
+})
+export class App {
+  protected readonly title = signal('second-angualr-project');
+  name: any = 'cttc';
+}

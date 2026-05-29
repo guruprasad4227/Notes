@@ -1,0 +1,21 @@
+<form [formGroup]="registerForm" (ngSubmit)="saveStudent()">
+  <label for="">UserName</label><span style="color: red">*</span>
+  <input type="text" name="userName" formControlName="userName" />
+  <br />
+  <label for="">Age</label><span style="color: red">*</span>
+  <input type="text" name="age" formControlName="age" />
+  <br />
+  <label for="">Password</label><span style="color: red">*</span>
+  <input type="text" name="password" formControlName="password" />
+  <br />
+  <label for="">Salary</label><span style="color: red">*</span>
+  <input type="text" name="salary" formControlName="salary" />
+  <br />
+  <label for="">Email</label><span style="color: red">*</span>
+  <input type="email" name="salary" formControlName="userMail" />
+  <br />
+  <label for="">Upload image</label>
+  <input type="file" name="image" accept="image/png, image/jpg, image/jpeg" (change)="fileUpload($event)" />
+  <br />
+  <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,29 @@
+
+<nav>
+
+  <a routerLink="/add-student"></a>
+</nav>
+<body>
+  
+  <table border="1" [cellPadding]="8" [cellSpacing]="2">
+    <thead>
+      <tr>
+        <td>UserName</td>
+        <td>Age</td>
+        <td>Salary</td>
+      </tr>
+    </thead>
+    @if (users != null) {
+      <tbody>
+        @for (user of users; track user.userId) {
+          <tr>
+            <td>{{ user.userName }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.salary }}</td>
+          </tr>
+        }
+      </tbody>
+    }
+  </table>
+  
+</body>
